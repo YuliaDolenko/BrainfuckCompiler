@@ -12,7 +12,6 @@ public class BrainfuckCompiler {
     public List<Command> compileProgram(String brainfuckProgram){
 
         CompilationVisitor visitor = new CompilationVisitor();
-
         LexemeFactory factory = new LexemeFactory();
 
         for (Character value : brainfuckProgram.toCharArray()) {

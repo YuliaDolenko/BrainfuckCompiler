@@ -3,11 +3,11 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class UnitTests {
-    Memory skeleton = new Memory();
+    Memory memory = new Memory();
 
     @Test
     public void testMemorySkeleton() {
-        Assert.assertNotNull(skeleton.getMemorySkeleton());
+        Assert.assertNotNull(memory.getMemorySkeleton());
     }
 
     @Test
@@ -44,15 +44,5 @@ public class UnitTests {
         memory[pointer]--;
 
         Assert.assertEquals(4, memory[pointer]);
-    }
-
-    @Test
-    public void pointerOperations() {
-        skeleton.increment();
-        skeleton.decrement();
-        skeleton.valueMore();
-        skeleton.valueLess();
-
-        Assert.assertEquals(skeleton.getPointer(), skeleton.getCurrentCellValue());
     }
 }
